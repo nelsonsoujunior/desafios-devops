@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: app-appnode
+  namespace: appnode
+  labels:
+    k8s-app: appnode-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: app-appnode 
+  template:
+    metadata:
+      labels:
+        k8s-app: appnode-app
+    spec:
+      containers:
+      - name: app-appnode
+        image: appnode
+        resources:
+          limits:
+            cpu:     250m
+            memory:  512Mi
+          requests:
+            cpu:     225m
+            memory:  256Mi
+        ports:
+        - containerPort: 3000
+          name: http
+          protocol: TCP

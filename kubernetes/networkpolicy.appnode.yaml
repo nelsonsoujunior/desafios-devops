@@ -1,0 +1,15 @@
+apiVersion: networkpolicy.uol.com.br/v1
+kind: Acl
+metadata:
+  name: appnode-acl
+  namespace: appnode
+spec:
+  ingress:
+  - from:
+    - networkSelector: 0.0.0.0/0
+    ports:
+    - port: 3000
+      protocol: tcp
+  podSelector:
+    matchLabels:
+      k8s-app: appnode-app

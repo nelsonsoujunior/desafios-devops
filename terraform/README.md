@@ -24,3 +24,39 @@ Recursos de infraestrutura em nubvem devem sempre ser criados utilizando gerenci
 - Pode se utilizar tanto AWS quanto GCP (Google Cloud), não é preciso executar o teste em ambas, somente uma.
 - Todos os recursos devem ser criados utilizando os créditos gratuitos da AWS/GCP.
 - Não esquecer de destruir os recursos após criação e testes do desafio para não haver cobranças ou esgotamento dos créditos.
+
+## Possível solução.
+
+- Para executar esse teste altere as variáveis abaixo no arquivo variables.tf, nesse teste não realizei a parte do Docker
+
+>variable "acces_key" {
+>  default = "INFERMAR CHAVE DE ACESSO"
+>}
+>
+>variable "secret_key" {
+>    default = "INFORMAR CHAVE DE SEGURANÇA"
+
+Execute os comandos:
+
+>$ terraform plan
+>
+>var.region
+>  Informe a regiao: 
+>
+>  Enter a value: us-east-1
+>
+>var.ssh
+>  Informe o range ou o IP com /32: 
+>
+>  Enter a value: 192.168.2.3/32
+
+
+Depois pode aplicar as alterações
+
+>$ terraform apply
+
+Conferir no console da aws se está tudo ok e depois
+
+>$ terraform destroy
+
+Para destruir o que foi contruido

@@ -30,3 +30,11 @@ Dentro deste repositório existe um subdiretório **app** e um **Dockerfile** qu
 * A aplicação sobe por _default_ utilizando a porta **3000** e utiliza uma variável de ambiente **$NAME**
 
 * Não é necessário realizar o _upload_ da imagem Docker para um registro público, você pode construir a imagem localmente e utilizá-la diretamente.
+
+## Possível solução
+
+- Neste teste eu não consegui simular pois estou utilizando o notebook do serviço e nele eu tenho algumas restrições onde o minikube não roda e não é possível instalar devido a dependencia do virtualbox que precisa de uma atualização de kernel da minha máquina e é necessário uma senha para boot na máquina, enfim, este ficou incompleto.
+
+Para subir essa aplicação execute o  comando chmod +x no arquivo e depois 
+
+> ./sobe-app.sh
