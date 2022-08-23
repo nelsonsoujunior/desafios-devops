@@ -30,7 +30,7 @@ Recursos de infraestrutura em nubvem devem sempre ser criados utilizando gerenci
 - Para executar esse teste altere as variáveis abaixo no arquivo variables.tf, nesse teste não realizei a parte do Docker
 
 >variable "acces_key" {
->  default = "INFERMAR CHAVE DE ACESSO"
+>  default = "INFORMAR CHAVE DE ACESSO"
 >}
 >
 >variable "secret_key" {
